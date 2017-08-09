@@ -11,6 +11,8 @@ import CoreLocation
 
 class GooglePlaceItem: Mappable {
     var name: String = ""
+    var placeDescription: String = ""
+    var placeId: String = ""
     var lat: Double = 0.0
     var lng: Double = 0.0
 
@@ -21,9 +23,12 @@ class GooglePlaceItem: Mappable {
     }
 
     open func mapping(map: Map) {
-        name    <- map["name"]
-        lat     <- map["geometry.location.lat"]
-        lng     <- map["geometry.location.lng"]
+        placeId             <- map["place_id"]
+        name                <- map["name"]
+        placeDescription    <- map["description"]
+        name                <- map["name"]
+        lat                 <- map["geometry.location.lat"]
+        lng                 <- map["geometry.location.lng"]
     }
 
     var coords: CLLocationCoordinate2D {

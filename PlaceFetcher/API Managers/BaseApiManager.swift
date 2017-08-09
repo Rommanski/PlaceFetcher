@@ -18,7 +18,7 @@ class BaseAPIManager<TObj: ObjectWrapperProtocol, TArr: ArrayWrapperProtocol> {
         self.netwrokManager = netwrokManager
     }
 
-    func sendRequestWithSingelObject(_ method: Alamofire.HTTPMethod = .get, url: String, params: [String: Any] = [:], customErrorHandle: Bool = false, callback: ((ApiResponse<TObj>) -> Void)?) {
+    func sendRequestWithSingelObject(_ method: Alamofire.HTTPMethod = .get, url: String, params: [String: Any] = [:], callback: ((ApiResponse<TObj>) -> Void)?) {
         NetworkManager.sharedInstance.sendRequest(method, url: url, params: params) { (response) in
             switch response {
             case .failure(let err):

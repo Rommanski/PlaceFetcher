@@ -10,6 +10,11 @@ import ObjectMapper
 
 class GooglePlaceArrayResult: ResultArrayWrapper<GooglePlaceItem> {
 
+    override func mapping(map: Map) {
+        super.mapping(map: map)
+        result          <- map["predictions"]
+    }
+
 }
 
 class GooglePlaceObjectResult: ResultObjectWrapper<GooglePlaceItem> {

@@ -64,7 +64,7 @@ class ResultObjectWrapper<T: Mappable>: ObjectWrapperProtocol {
     }
 
     func mapping(map: Map) {
-        object          <- map["results"]
+        object          <- map["result"]
         nextPageToken   <- map["next_page_token"]
         status          <- map["status"]
     }
