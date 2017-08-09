@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.5.0)
+  - DropDown (2)
   - GoogleMaps (2.3.1):
     - GoogleMaps/Maps (= 2.3.1)
   - GoogleMaps/Base (2.3.1)
@@ -12,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - DropDown
   - GoogleMaps
   - ObjectMapper
   - RxCocoa
@@ -19,11 +21,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  DropDown: 744784d9c9aa505100e942c16acd05430cbb2f0a
   GoogleMaps: c66a71058b9b1294bcdd5463a68e357fa50c079f
   ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
   RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
   RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
 
-PODFILE CHECKSUM: 202b874960c92a34aaadeb11f85a6a2bfdb5fb26
+PODFILE CHECKSUM: beeaf4204e28876284e47d1c9175d52c91200720
 
 COCOAPODS: 1.2.0

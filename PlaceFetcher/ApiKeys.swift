@@ -13,6 +13,7 @@ import Foundation
  */
 struct ApiKeys {
     static var googlePlaceApiKey = "AIzaSyBu5JMNPBSoipWh4nx2P4p3e8xU7kOj0U0"
+    static var googleMapsApiKey = "AIzaSyD4hBfPLnD-fJVpt-IYEzVvQz49Mer6v4Q"
 
     // here we can handle case when there are production/testing server
     static var serverUrl: String {

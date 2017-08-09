@@ -29,6 +29,10 @@ class ResultArrayWrapper<T: Mappable>: ArrayWrapperProtocol {
     var nextPageToken: String = ""
     var status: String = ""
 
+    init() {
+
+    }
+
     // MARK: - object mapping
 
     required init?(map: Map) {
@@ -48,6 +52,10 @@ class ResultObjectWrapper<T: Mappable>: ObjectWrapperProtocol {
     var object: T?
     var nextPageToken: String = ""
     var status: String = ""
+
+    init() {
+
+    }
 
     // MARK: - object mapping
 

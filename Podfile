@@ -9,4 +9,5 @@ target 'PlaceFetcher' do
   pod 'ObjectMapper'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'DropDown'
 end

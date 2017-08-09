@@ -7,6 +7,7 @@
 //
 
 import ObjectMapper
+import CoreLocation
 
 class GooglePlaceItem: Mappable {
     var name: String = ""
@@ -23,6 +24,10 @@ class GooglePlaceItem: Mappable {
         name    <- map["name"]
         lat     <- map["geometry.location.lat"]
         lng     <- map["geometry.location.lng"]
+    }
+
+    var coords: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: lat, longitude: lng)
     }
 
 }
