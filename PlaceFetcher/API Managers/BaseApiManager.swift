@@ -11,14 +11,14 @@ import ObjectMapper
 
 typealias ApiResponse = Alamofire.Result
 
-class BaseAPIManager<T_Obj: ObjectWrapperProtocol, T_Arr: ArrayWrapperProtocol> {
+class BaseAPIManager<TObj: ObjectWrapperProtocol, TArr: ArrayWrapperProtocol> {
     private let netwrokManager: NetworkManagerProtocol
 
     required init(netwrokManager: NetworkManagerProtocol = NetworkManager.sharedInstance) {
         self.netwrokManager = netwrokManager
     }
 
-    func sendRequestWithSingelObject(_ method: Alamofire.HTTPMethod = .get, url: String, params: [String: Any] = [:], customErrorHandle: Bool = false, callback: ((ApiResponse<T_Obj>) -> Void)?) {
+    func sendRequestWithSingelObject(_ method: Alamofire.HTTPMethod = .get, url: String, params: [String: Any] = [:], customErrorHandle: Bool = false, callback: ((ApiResponse<TObj>) -> Void)?) {
         NetworkManager.sharedInstance.sendRequest(method, url: url, params: params) { (response) in
             switch response {
             case .failure(let err):
@@ -26,7 +26,7 @@ class BaseAPIManager<T_Obj: ObjectWrapperProtocol, T_Arr: ArrayWrapperProtocol> 
                 break
 
             case .success(let jsonString):
-                if let wrapper = Mapper<T_Obj>().map(JSONString: jsonString) {
+                if let wrapper = Mapper<TObj>().map(JSONString: jsonString) {
                     callback?(ApiResponse.success(wrapper))
                 }
                 break
@@ -34,7 +34,7 @@ class BaseAPIManager<T_Obj: ObjectWrapperProtocol, T_Arr: ArrayWrapperProtocol> 
         }
     }
 
-    func sendRequestWithArrayOfObjects(_ method: Alamofire.HTTPMethod = .get, url: String, params: [String: Any] = [:], callback: ((ApiResponse<T_Arr>) -> Void)?) {
+    func sendRequestWithArrayOfObjects(_ method: Alamofire.HTTPMethod = .get, url: String, params: [String: Any] = [:], callback: ((ApiResponse<TArr>) -> Void)?) {
         NetworkManager.sharedInstance.sendRequest(method, url: url, params: params) { (response) in
             switch response {
             case .failure(let err):
@@ -42,7 +42,7 @@ class BaseAPIManager<T_Obj: ObjectWrapperProtocol, T_Arr: ArrayWrapperProtocol> 
                 break
 
             case .success(let jsonString):
-                if let wrapper = Mapper<T_Arr>().map(JSONString: jsonString) {
+                if let wrapper = Mapper<TArr>().map(JSONString: jsonString) {
                     callback?(ApiResponse.success(wrapper))
                 }
                 break

@@ -18,5 +18,5 @@ struct ApiKeys {
     static var serverUrl: String {
         return "https://maps.googleapis.com"
     }
-    
+
 }

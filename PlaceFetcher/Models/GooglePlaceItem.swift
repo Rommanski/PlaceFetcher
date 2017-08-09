@@ -24,6 +24,5 @@ class GooglePlaceItem: Mappable {
         lat     <- map["geometry.location.lat"]
         lng     <- map["geometry.location.lng"]
     }
-    
-}
 
+}

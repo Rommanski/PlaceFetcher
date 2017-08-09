@@ -40,7 +40,7 @@ class ResultArrayWrapper<T: Mappable>: ArrayWrapperProtocol {
         nextPageToken   <- map["next_page_token"]
         status          <- map["status"]
     }
-    
+
 }
 
 class ResultObjectWrapper<T: Mappable>: ObjectWrapperProtocol {
@@ -60,5 +60,5 @@ class ResultObjectWrapper<T: Mappable>: ObjectWrapperProtocol {
         nextPageToken   <- map["next_page_token"]
         status          <- map["status"]
     }
-    
+
 }

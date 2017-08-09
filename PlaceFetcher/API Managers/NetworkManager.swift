@@ -23,7 +23,7 @@ protocol NetworkManagerProtocol: class {
     func patch(_ url: String, params: [String: Any], callback: ((StringApiResponse) -> Void)?)
 
     func delete(_ url: String, params: [String: Any], callback: ((StringApiResponse) -> Void)?)
-    
+
 }
 
 class NetworkManager: NetworkManagerProtocol {
@@ -90,6 +90,5 @@ class NetworkManager: NetworkManagerProtocol {
             }
         }
     }
-    
-}
 
+}
