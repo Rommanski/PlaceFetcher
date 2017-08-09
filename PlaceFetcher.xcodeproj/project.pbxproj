@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F02DE7E523CC825682D3B5A /* Pods_PlaceFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0F194D8C5A067DE67E2DE1 /* Pods_PlaceFetcher.framework */; };
+		7F1BE3531F3BB6E6001379E4 /* GMSMapViewDelegate+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BE3521F3BB6E6001379E4 /* GMSMapViewDelegate+Rx.swift */; };
 		7F3C56191F39FAEB0018BF2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56181F39FAEB0018BF2B /* AppDelegate.swift */; };
 		7F3C561B1F39FAEB0018BF2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C561A1F39FAEB0018BF2B /* ViewController.swift */; };
 		7F3C561E1F39FAEB0018BF2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F3C561C1F39FAEB0018BF2B /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		6424232D9F53A50683A2A2A8 /* Pods-PlaceFetcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceFetcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceFetcher/Pods-PlaceFetcher.release.xcconfig"; sourceTree = "<group>"; };
+		7F1BE3521F3BB6E6001379E4 /* GMSMapViewDelegate+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GMSMapViewDelegate+Rx.swift"; path = "Extension/GMSMapViewDelegate+Rx.swift"; sourceTree = "<group>"; };
 		7F3C56151F39FAEB0018BF2B /* PlaceFetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceFetcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F3C56181F39FAEB0018BF2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F3C561A1F39FAEB0018BF2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F1BE3511F3BB69E001379E4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F1BE3521F3BB6E6001379E4 /* GMSMapViewDelegate+Rx.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		7F3C560C1F39FAEB0018BF2B = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 		7F3C56171F39FAEB0018BF2B /* PlaceFetcher */ = {
 			isa = PBXGroup;
 			children = (
+				7F1BE3511F3BB69E001379E4 /* Extensions */,
 				7F3C564D1F3A008E0018BF2B /* Models */,
 				7F3C56461F39FDE40018BF2B /* API Managers */,
 				7F3C56181F39FAEB0018BF2B /* AppDelegate.swift */,
@@ -389,6 +400,7 @@
 				7F3C561B1F39FAEB0018BF2B /* ViewController.swift in Sources */,
 				7F3C564C1F3A001A0018BF2B /* GooglePlaceAPIManager.swift in Sources */,
 				7F3C564F1F3A00FD0018BF2B /* GooglePlaceResult.swift in Sources */,
+				7F1BE3531F3BB6E6001379E4 /* GMSMapViewDelegate+Rx.swift in Sources */,
 				7F3C56551F3A03FC0018BF2B /* BaseModels.swift in Sources */,
 				7F3C564A1F39FF300018BF2B /* ApiKeys.swift in Sources */,
 				7F3C56511F3A02140018BF2B /* GooglePlaceItem.swift in Sources */,

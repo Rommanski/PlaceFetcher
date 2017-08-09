@@ -26,6 +26,11 @@ class MapController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.settings.myLocationButton = true
+        mapView.rx.didUpdateLocation
+            .map { $0.target }
+            .bind(to: viewModel.searchCoordVariable)
+            .addDisposableTo(bag)
+
         dropDown.anchorView = textFieldContainer
         dropDown.width = textFieldContainer.frame.width
         dropDown.direction = .bottom
@@ -45,6 +50,7 @@ class MapController: UIViewController {
 
 class MapViewModel {
     let searchTextVariable = Variable<String?>("")
+    let searchCoordVariable = Variable<CLLocationCoordinate2D>(CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0))
     let searchResultVariable = Variable<[GooglePlaceItem]>([])
 
     let bag = DisposeBag()
@@ -58,7 +64,7 @@ class MapViewModel {
             }
             .filter { !$0.isEmpty }
             .flatMap { (val) -> Observable<GooglePlaceArrayResult> in
-            return GooglePlaceAPIManager.sharedInstance.getLocations(for: val, with: CLLocationCoordinate2D(latitude: -33.8670522, longitude: 151.1957362))
+            return GooglePlaceAPIManager.sharedInstance.getLocations(for: val, with: self.searchCoordVariable.value)
         }
             .map { (arrayResult) -> [GooglePlaceItem] in
             return arrayResult.result
