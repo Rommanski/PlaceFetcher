@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F02DE7E523CC825682D3B5A /* Pods_PlaceFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0F194D8C5A067DE67E2DE1 /* Pods_PlaceFetcher.framework */; };
 		7F3C56191F39FAEB0018BF2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56181F39FAEB0018BF2B /* AppDelegate.swift */; };
 		7F3C561B1F39FAEB0018BF2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C561A1F39FAEB0018BF2B /* ViewController.swift */; };
 		7F3C561E1F39FAEB0018BF2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F3C561C1F39FAEB0018BF2B /* Main.storyboard */; };
@@ -14,6 +15,13 @@
 		7F3C56231F39FAEB0018BF2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F3C56211F39FAEB0018BF2B /* LaunchScreen.storyboard */; };
 		7F3C562E1F39FAEC0018BF2B /* PlaceFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C562D1F39FAEC0018BF2B /* PlaceFetcherTests.swift */; };
 		7F3C56391F39FAEC0018BF2B /* PlaceFetcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56381F39FAEC0018BF2B /* PlaceFetcherUITests.swift */; };
+		7F3C56481F39FE060018BF2B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56471F39FE060018BF2B /* NetworkManager.swift */; };
+		7F3C564A1F39FF300018BF2B /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56491F39FF300018BF2B /* ApiKeys.swift */; };
+		7F3C564C1F3A001A0018BF2B /* GooglePlaceAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C564B1F3A001A0018BF2B /* GooglePlaceAPIManager.swift */; };
+		7F3C564F1F3A00FD0018BF2B /* GooglePlaceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C564E1F3A00FD0018BF2B /* GooglePlaceResult.swift */; };
+		7F3C56511F3A02140018BF2B /* GooglePlaceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56501F3A02140018BF2B /* GooglePlaceItem.swift */; };
+		7F3C56531F3A03840018BF2B /* BaseApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56521F3A03840018BF2B /* BaseApiManager.swift */; };
+		7F3C56551F3A03FC0018BF2B /* BaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56541F3A03FC0018BF2B /* BaseModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6424232D9F53A50683A2A2A8 /* Pods-PlaceFetcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceFetcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceFetcher/Pods-PlaceFetcher.release.xcconfig"; sourceTree = "<group>"; };
 		7F3C56151F39FAEB0018BF2B /* PlaceFetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceFetcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F3C56181F39FAEB0018BF2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F3C561A1F39FAEB0018BF2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,15 @@
 		7F3C56341F39FAEC0018BF2B /* PlaceFetcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaceFetcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F3C56381F39FAEC0018BF2B /* PlaceFetcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFetcherUITests.swift; sourceTree = "<group>"; };
 		7F3C563A1F39FAEC0018BF2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F3C56471F39FE060018BF2B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = "API Managers/NetworkManager.swift"; sourceTree = "<group>"; };
+		7F3C56491F39FF300018BF2B /* ApiKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
+		7F3C564B1F3A001A0018BF2B /* GooglePlaceAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlaceAPIManager.swift; path = "API Managers/GooglePlaceAPIManager.swift"; sourceTree = "<group>"; };
+		7F3C564E1F3A00FD0018BF2B /* GooglePlaceResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlaceResult.swift; path = Models/GooglePlaceResult.swift; sourceTree = "<group>"; };
+		7F3C56501F3A02140018BF2B /* GooglePlaceItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlaceItem.swift; path = Models/GooglePlaceItem.swift; sourceTree = "<group>"; };
+		7F3C56521F3A03840018BF2B /* BaseApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseApiManager.swift; path = "API Managers/BaseApiManager.swift"; sourceTree = "<group>"; };
+		7F3C56541F3A03FC0018BF2B /* BaseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseModels.swift; path = Models/BaseModels.swift; sourceTree = "<group>"; };
+		92F2FC36AB923F5F41496651 /* Pods-PlaceFetcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceFetcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceFetcher/Pods-PlaceFetcher.debug.xcconfig"; sourceTree = "<group>"; };
+		BC0F194D8C5A067DE67E2DE1 /* Pods_PlaceFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaceFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F02DE7E523CC825682D3B5A /* Pods_PlaceFetcher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +100,8 @@
 				7F3C562C1F39FAEC0018BF2B /* PlaceFetcherTests */,
 				7F3C56371F39FAEC0018BF2B /* PlaceFetcherUITests */,
 				7F3C56161F39FAEB0018BF2B /* Products */,
+				99C87F43CFA73CB9AD26CD93 /* Pods */,
+				8023C952B76EEB0A690ED19B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +118,15 @@
 		7F3C56171F39FAEB0018BF2B /* PlaceFetcher */ = {
 			isa = PBXGroup;
 			children = (
+				7F3C564D1F3A008E0018BF2B /* Models */,
+				7F3C56461F39FDE40018BF2B /* API Managers */,
 				7F3C56181F39FAEB0018BF2B /* AppDelegate.swift */,
 				7F3C561A1F39FAEB0018BF2B /* ViewController.swift */,
 				7F3C561C1F39FAEB0018BF2B /* Main.storyboard */,
 				7F3C561F1F39FAEB0018BF2B /* Assets.xcassets */,
 				7F3C56211F39FAEB0018BF2B /* LaunchScreen.storyboard */,
 				7F3C56241F39FAEB0018BF2B /* Info.plist */,
+				7F3C56491F39FF300018BF2B /* ApiKeys.swift */,
 			);
 			path = PlaceFetcher;
 			sourceTree = "<group>";
@@ -125,6 +149,43 @@
 			path = PlaceFetcherUITests;
 			sourceTree = "<group>";
 		};
+		7F3C56461F39FDE40018BF2B /* API Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7F3C56471F39FE060018BF2B /* NetworkManager.swift */,
+				7F3C564B1F3A001A0018BF2B /* GooglePlaceAPIManager.swift */,
+				7F3C56521F3A03840018BF2B /* BaseApiManager.swift */,
+			);
+			name = "API Managers";
+			sourceTree = "<group>";
+		};
+		7F3C564D1F3A008E0018BF2B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7F3C56541F3A03FC0018BF2B /* BaseModels.swift */,
+				7F3C564E1F3A00FD0018BF2B /* GooglePlaceResult.swift */,
+				7F3C56501F3A02140018BF2B /* GooglePlaceItem.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8023C952B76EEB0A690ED19B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC0F194D8C5A067DE67E2DE1 /* Pods_PlaceFetcher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99C87F43CFA73CB9AD26CD93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92F2FC36AB923F5F41496651 /* Pods-PlaceFetcher.debug.xcconfig */,
+				6424232D9F53A50683A2A2A8 /* Pods-PlaceFetcher.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F3C563D1F39FAEC0018BF2B /* Build configuration list for PBXNativeTarget "PlaceFetcher" */;
 			buildPhases = (
+				BE15BF91668C23C1603FCFA4 /* [CP] Check Pods Manifest.lock */,
 				7F3C56111F39FAEB0018BF2B /* Sources */,
 				7F3C56121F39FAEB0018BF2B /* Frameworks */,
 				7F3C56131F39FAEB0018BF2B /* Resources */,
+				C779C3FD77B4F05EC97051A8 /* [CP] Embed Pods Frameworks */,
+				D55D6B049251B57245CBC8EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,13 +318,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BE15BF91668C23C1603FCFA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C779C3FD77B4F05EC97051A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceFetcher/Pods-PlaceFetcher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D55D6B049251B57245CBC8EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceFetcher/Pods-PlaceFetcher-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7F3C56111F39FAEB0018BF2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F3C56481F39FE060018BF2B /* NetworkManager.swift in Sources */,
 				7F3C561B1F39FAEB0018BF2B /* ViewController.swift in Sources */,
+				7F3C564C1F3A001A0018BF2B /* GooglePlaceAPIManager.swift in Sources */,
+				7F3C564F1F3A00FD0018BF2B /* GooglePlaceResult.swift in Sources */,
+				7F3C56551F3A03FC0018BF2B /* BaseModels.swift in Sources */,
+				7F3C564A1F39FF300018BF2B /* ApiKeys.swift in Sources */,
+				7F3C56511F3A02140018BF2B /* GooglePlaceItem.swift in Sources */,
 				7F3C56191F39FAEB0018BF2B /* AppDelegate.swift in Sources */,
+				7F3C56531F3A03840018BF2B /* BaseApiManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +529,7 @@
 		};
 		7F3C563E1F39FAEC0018BF2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92F2FC36AB923F5F41496651 /* Pods-PlaceFetcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PlaceFetcher/Info.plist;
@@ -422,6 +542,7 @@
 		};
 		7F3C563F1F39FAEC0018BF2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6424232D9F53A50683A2A2A8 /* Pods-PlaceFetcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PlaceFetcher/Info.plist;
@@ -505,6 +626,7 @@
 				7F3C563F1F39FAEC0018BF2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F3C56401F39FAEC0018BF2B /* Build configuration list for PBXNativeTarget "PlaceFetcherTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +635,7 @@
 				7F3C56421F39FAEC0018BF2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F3C56431F39FAEC0018BF2B /* Build configuration list for PBXNativeTarget "PlaceFetcherUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +644,7 @@
 				7F3C56451F39FAEC0018BF2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

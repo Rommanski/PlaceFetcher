@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        GooglePlaceAPIManager.sharedInstance.getLocations(for: "cruise", with: CLLocationCoordinate2D(latitude: -33.8670522, longitude: 151.1957362)) { (result) in
+
+        }
     }
 
     override func didReceiveMemoryWarning() {
