@@ -29,13 +29,7 @@ class GooglePlaceAPIManager: BaseAPIManager<GooglePlaceObjectResult, GooglePlace
     func getAutocomplete(for keyword: String, with coords: CLLocationCoordinate2D) -> Observable<GooglePlaceArrayResult> {
         return Observable<GooglePlaceArrayResult>.create({ (observer) -> Disposable in
             self.getAutocomplete(for: keyword, with: coords, callback: { (result) in
-                switch result {
-                case .success(let val):
-                    observer.onNext(val)
-
-                case .failure(let err):
-                    observer.onError(err)
-                }
+                self.openApiResponse(observer: observer, result: result)
             })
 
             return Disposables.create()
@@ -53,13 +47,7 @@ class GooglePlaceAPIManager: BaseAPIManager<GooglePlaceObjectResult, GooglePlace
     func getDetails(forPlaceWithId placeId: String) -> Observable<GooglePlaceObjectResult> {
         return Observable<GooglePlaceObjectResult>.create({ (observer) -> Disposable in
             self.getDetails(forPlaceWithId: placeId, callback: { (result) in
-                switch result {
-                case .success(let val):
-                    observer.onNext(val)
-
-                case .failure(let err):
-                    observer.onError(err)
-                }
+                self.openApiResponse(observer: observer, result: result)
             })
 
             return Disposables.create()

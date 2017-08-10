@@ -8,6 +8,7 @@
 
 import Alamofire
 import ObjectMapper
+import RxSwift
 
 typealias ApiResponse = Alamofire.Result
 
@@ -47,6 +48,26 @@ class BaseAPIManager<TObj: ObjectWrapperProtocol, TArr: ArrayWrapperProtocol> {
                 }
                 break
             }
+        }
+    }
+
+    func openApiResponse(observer: AnyObserver<TObj>, result: ApiResponse<TObj>) {
+        switch result {
+        case .success(let val):
+            observer.onNext(val)
+
+        case .failure(let err):
+            observer.onError(err)
+        }
+    }
+
+    func openApiResponse(observer: AnyObserver<TArr>, result: ApiResponse<TArr>) {
+        switch result {
+        case .success(let val):
+            observer.onNext(val)
+
+        case .failure(let err):
+            observer.onError(err)
         }
     }
 

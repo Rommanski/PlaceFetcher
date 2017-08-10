@@ -13,7 +13,7 @@ import RxSwift
 import RxCocoa
 import DropDown
 
-class MapController: UIViewController {
+class MapViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var searchingTextField: UITextField!
     @IBOutlet weak var textFieldContainer: UIView!
@@ -37,6 +37,7 @@ class MapController: UIViewController {
         dropDown.bottomOffset = CGPoint(x: 0, y: textFieldContainer.bounds.height + 20.0)
         dropDown.selectionAction = { [weak self] (index: Int, _: String) in
             self?.viewModel.selectedPlaceSubject.onNext(index)
+            self?.view.endEditing(true)
         }
 
         searchingTextField.rx.text.asObservable().bind(to: viewModel.searchTextVariable).addDisposableTo(bag)
@@ -50,44 +51,6 @@ class MapController: UIViewController {
                 self?.mapView.camera = GMSCameraPosition.camera(withTarget: place!.coords, zoom: 10.0)
             }
         }).addDisposableTo(bag)
-    }
-
-}
-
-class MapViewModel {
-    let searchTextVariable = Variable<String?>("")
-    let searchCoordVariable = Variable<CLLocationCoordinate2D>(CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0))
-    let searchResultVariable = Variable<[GooglePlaceItem]>([])
-    let selectedPlaceVariable = Variable<GooglePlaceItem?>(nil)
-    let selectedPlaceSubject = PublishSubject<Int>()
-
-    let bag = DisposeBag()
-
-    init() {
-        searchTextVariable.asObservable()
-            .map { val -> String in
-                return val?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-            }
-            .filter { !$0.isEmpty }
-            .distinctUntilChanged()
-            // do not spam server :)
-            .debounce(0.5, scheduler: MainScheduler.instance)
-            .flatMap { (val) -> Observable<GooglePlaceArrayResult> in
-                return GooglePlaceAPIManager.sharedInstance.getAutocomplete(for: val, with: self.searchCoordVariable.value)
-            }
-            .map { (arrayResult) -> [GooglePlaceItem] in
-                return arrayResult.result
-            }
-            .bind(to: searchResultVariable)
-            .addDisposableTo(bag)
-
-        selectedPlaceSubject.asObservable()
-            .flatMap { index -> Observable<GooglePlaceObjectResult> in
-                return GooglePlaceAPIManager.sharedInstance.getDetails(forPlaceWithId: self.searchResultVariable.value[index].placeId)
-            }
-            .map { $0.object }
-            .bind(to: selectedPlaceVariable)
-            .addDisposableTo(bag)
     }
 
 }
