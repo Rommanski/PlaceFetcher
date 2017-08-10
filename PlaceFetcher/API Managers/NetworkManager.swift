@@ -70,8 +70,6 @@ class NetworkManager: NetworkManagerProtocol {
 
     func sendRequest(_ method: Alamofire.HTTPMethod, url: String, params: [String: Any] = [:], encoding: ParameterEncoding = URLEncoding.default, callback: ((StringApiResponse) -> Void)?) {
         let requestUrl = URL(string: ApiKeys.serverUrl + url)!
-        print(requestUrl.absoluteString)
-        print(params)
 
         let finalEncoding: ParameterEncoding = .get == method ? URLEncoding.queryString: JSONEncoding.default
         let request = manager.request(requestUrl, method: method, parameters: params, encoding: finalEncoding, headers: defaultHeaders)
@@ -86,7 +84,6 @@ class NetworkManager: NetworkManagerProtocol {
             }
 
             if result.result.isSuccess, let jsonString = result.result.value {
-                print(jsonString)
                 callback?(StringApiResponse.success(jsonString))
             } else {
                 //                callback?(nil, getErrorFor(SalonErrorType.invalidAPIResponse))

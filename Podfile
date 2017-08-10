@@ -10,4 +10,5 @@ target 'PlaceFetcher' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'DropDown'
+  pod 'SVProgressHUD'
 end

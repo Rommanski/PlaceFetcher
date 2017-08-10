@@ -24,6 +24,10 @@
 		7F3C56511F3A02140018BF2B /* GooglePlaceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56501F3A02140018BF2B /* GooglePlaceItem.swift */; };
 		7F3C56531F3A03840018BF2B /* BaseApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56521F3A03840018BF2B /* BaseApiManager.swift */; };
 		7F3C56551F3A03FC0018BF2B /* BaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56541F3A03FC0018BF2B /* BaseModels.swift */; };
+		7F6F65D61F3C6C8B005A2BCE /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F65D51F3C6C8B005A2BCE /* RouterProtocol.swift */; };
+		7F6F65DB1F3C6D9C005A2BCE /* SearchPlaceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F65DA1F3C6D9C005A2BCE /* SearchPlaceRouter.swift */; };
+		7F6F65E01F3C794C005A2BCE /* PlaceShowCiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F65DF1F3C794C005A2BCE /* PlaceShowCiewController.swift */; };
+		7F6F65E21F3C7D6E005A2BCE /* PlaceShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F65E11F3C7D6E005A2BCE /* PlaceShowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		7F3C56501F3A02140018BF2B /* GooglePlaceItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlaceItem.swift; path = Models/GooglePlaceItem.swift; sourceTree = "<group>"; };
 		7F3C56521F3A03840018BF2B /* BaseApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseApiManager.swift; path = "API Managers/BaseApiManager.swift"; sourceTree = "<group>"; };
 		7F3C56541F3A03FC0018BF2B /* BaseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseModels.swift; path = Models/BaseModels.swift; sourceTree = "<group>"; };
+		7F6F65D51F3C6C8B005A2BCE /* RouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouterProtocol.swift; path = Routers/RouterProtocol.swift; sourceTree = "<group>"; };
+		7F6F65DA1F3C6D9C005A2BCE /* SearchPlaceRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchPlaceRouter.swift; path = Routers/SearchPlaceRouter.swift; sourceTree = "<group>"; };
+		7F6F65DF1F3C794C005A2BCE /* PlaceShowCiewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceShowCiewController.swift; path = Controllers/PlaceShowCiewController.swift; sourceTree = "<group>"; };
+		7F6F65E11F3C7D6E005A2BCE /* PlaceShowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceShowViewModel.swift; sourceTree = "<group>"; };
 		92F2FC36AB923F5F41496651 /* Pods-PlaceFetcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceFetcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceFetcher/Pods-PlaceFetcher.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0F194D8C5A067DE67E2DE1 /* Pods_PlaceFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaceFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,17 +138,14 @@
 		7F3C56171F39FAEB0018BF2B /* PlaceFetcher */ = {
 			isa = PBXGroup;
 			children = (
+				7F6F65DC1F3C787C005A2BCE /* Scenes */,
+				7F6F65D91F3C6CE0005A2BCE /* SupportingFiles */,
+				7F3C56461F39FDE40018BF2B /* API Managers */,
+				7F3C56491F39FF300018BF2B /* ApiKeys.swift */,
+				7F3C56181F39FAEB0018BF2B /* AppDelegate.swift */,
 				7F1BE3511F3BB69E001379E4 /* Extensions */,
 				7F3C564D1F3A008E0018BF2B /* Models */,
-				7F3C56461F39FDE40018BF2B /* API Managers */,
-				7F3C56181F39FAEB0018BF2B /* AppDelegate.swift */,
-				7F3C561A1F39FAEB0018BF2B /* MapViewController.swift */,
-				7F3C561C1F39FAEB0018BF2B /* Main.storyboard */,
-				7F3C561F1F39FAEB0018BF2B /* Assets.xcassets */,
-				7F3C56211F39FAEB0018BF2B /* LaunchScreen.storyboard */,
-				7F3C56241F39FAEB0018BF2B /* Info.plist */,
-				7F3C56491F39FF300018BF2B /* ApiKeys.swift */,
-				7F1BE3541F3BCEFD001379E4 /* MapViewModel.swift */,
+				7F6F65D71F3C6CB4005A2BCE /* Storyboards */,
 			);
 			path = PlaceFetcher;
 			sourceTree = "<group>";
@@ -181,6 +186,53 @@
 				7F3C56501F3A02140018BF2B /* GooglePlaceItem.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		7F6F65D71F3C6CB4005A2BCE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7F3C56211F39FAEB0018BF2B /* LaunchScreen.storyboard */,
+				7F3C561C1F39FAEB0018BF2B /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		7F6F65D91F3C6CE0005A2BCE /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7F3C561F1F39FAEB0018BF2B /* Assets.xcassets */,
+				7F3C56241F39FAEB0018BF2B /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		7F6F65DC1F3C787C005A2BCE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7F6F65D51F3C6C8B005A2BCE /* RouterProtocol.swift */,
+				7F6F65DE1F3C7918005A2BCE /* PlaceShow */,
+				7F6F65DD1F3C7880005A2BCE /* PlaceSearcher */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		7F6F65DD1F3C7880005A2BCE /* PlaceSearcher */ = {
+			isa = PBXGroup;
+			children = (
+				7F3C561A1F39FAEB0018BF2B /* MapViewController.swift */,
+				7F1BE3541F3BCEFD001379E4 /* MapViewModel.swift */,
+				7F6F65DA1F3C6D9C005A2BCE /* SearchPlaceRouter.swift */,
+			);
+			name = PlaceSearcher;
+			sourceTree = "<group>";
+		};
+		7F6F65DE1F3C7918005A2BCE /* PlaceShow */ = {
+			isa = PBXGroup;
+			children = (
+				7F6F65DF1F3C794C005A2BCE /* PlaceShowCiewController.swift */,
+				7F6F65E11F3C7D6E005A2BCE /* PlaceShowViewModel.swift */,
+			);
+			name = PlaceShow;
 			sourceTree = "<group>";
 		};
 		8023C952B76EEB0A690ED19B /* Frameworks */ = {
@@ -272,6 +324,7 @@
 				TargetAttributes = {
 					7F3C56141F39FAEB0018BF2B = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 565PUU22ST;
 						ProvisioningStyle = Automatic;
 					};
 					7F3C56281F39FAEC0018BF2B = {
@@ -400,15 +453,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F3C56481F39FE060018BF2B /* NetworkManager.swift in Sources */,
+				7F6F65E21F3C7D6E005A2BCE /* PlaceShowViewModel.swift in Sources */,
 				7F3C561B1F39FAEB0018BF2B /* MapViewController.swift in Sources */,
 				7F3C564C1F3A001A0018BF2B /* GooglePlaceAPIManager.swift in Sources */,
 				7F3C564F1F3A00FD0018BF2B /* GooglePlaceResult.swift in Sources */,
 				7F1BE3531F3BB6E6001379E4 /* GMSMapViewDelegate+Rx.swift in Sources */,
 				7F3C56551F3A03FC0018BF2B /* BaseModels.swift in Sources */,
+				7F6F65D61F3C6C8B005A2BCE /* RouterProtocol.swift in Sources */,
 				7F1BE3551F3BCEFD001379E4 /* MapViewModel.swift in Sources */,
+				7F6F65DB1F3C6D9C005A2BCE /* SearchPlaceRouter.swift in Sources */,
 				7F3C564A1F39FF300018BF2B /* ApiKeys.swift in Sources */,
 				7F3C56511F3A02140018BF2B /* GooglePlaceItem.swift in Sources */,
 				7F3C56191F39FAEB0018BF2B /* AppDelegate.swift in Sources */,
+				7F6F65E01F3C794C005A2BCE /* PlaceShowCiewController.swift in Sources */,
 				7F3C56531F3A03840018BF2B /* BaseApiManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +619,7 @@
 			baseConfigurationReference = 92F2FC36AB923F5F41496651 /* Pods-PlaceFetcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 565PUU22ST;
 				INFOPLIST_FILE = PlaceFetcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bohachevskyy.PlaceFetcher;
@@ -575,6 +633,7 @@
 			baseConfigurationReference = 6424232D9F53A50683A2A2A8 /* Pods-PlaceFetcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 565PUU22ST;
 				INFOPLIST_FILE = PlaceFetcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bohachevskyy.PlaceFetcher;

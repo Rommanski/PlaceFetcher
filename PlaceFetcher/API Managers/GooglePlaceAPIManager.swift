@@ -44,10 +44,11 @@ class GooglePlaceAPIManager: BaseAPIManager<GooglePlaceObjectResult, GooglePlace
         self.sendRequestWithSingelObject(.get, url: detailsUrl, params: params, callback: callback)
     }
 
-    func getDetails(forPlaceWithId placeId: String) -> Observable<GooglePlaceObjectResult> {
-        return Observable<GooglePlaceObjectResult>.create({ (observer) -> Disposable in
+    func getDetails(forPlaceWithId placeId: String) -> Observable<ApiResponse<GooglePlaceObjectResult>> {
+        return Observable<ApiResponse<GooglePlaceObjectResult>>.create({ (observer) -> Disposable in
             self.getDetails(forPlaceWithId: placeId, callback: { (result) in
-                self.openApiResponse(observer: observer, result: result)
+                observer.onNext(result)
+//                self.openApiResponse(observer: observer, result: result)
             })
 
             return Disposables.create()
