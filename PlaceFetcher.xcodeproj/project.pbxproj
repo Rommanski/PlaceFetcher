@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F02DE7E523CC825682D3B5A /* Pods_PlaceFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0F194D8C5A067DE67E2DE1 /* Pods_PlaceFetcher.framework */; };
+		3EDA740CEA7FC730734948A4 /* Pods_PlaceFetcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3528AC390CFB1C0E7FBEA2 /* Pods_PlaceFetcherTests.framework */; };
+		74AF5F2AB9EF64384E9009A9 /* Pods_PlaceFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CD8CD92274B9693D42CE1A /* Pods_PlaceFetcher.framework */; };
 		7F1BE3531F3BB6E6001379E4 /* GMSMapViewDelegate+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BE3521F3BB6E6001379E4 /* GMSMapViewDelegate+Rx.swift */; };
 		7F1BE3551F3BCEFD001379E4 /* PlaceSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BE3541F3BCEFD001379E4 /* PlaceSearchViewModel.swift */; };
 		7F3C56191F39FAEB0018BF2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56181F39FAEB0018BF2B /* AppDelegate.swift */; };
@@ -24,11 +25,14 @@
 		7F3C56511F3A02140018BF2B /* GooglePlaceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56501F3A02140018BF2B /* GooglePlaceItem.swift */; };
 		7F3C56531F3A03840018BF2B /* BaseApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56521F3A03840018BF2B /* BaseApiManager.swift */; };
 		7F3C56551F3A03FC0018BF2B /* BaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C56541F3A03FC0018BF2B /* BaseModels.swift */; };
+		7F55867A1F3E34D600C7E4C9 /* PlaceDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F5586791F3E34D600C7E4C9 /* PlaceDetails.json */; };
 		7F6F65D61F3C6C8B005A2BCE /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F65D51F3C6C8B005A2BCE /* RouterProtocol.swift */; };
 		7F6F65DB1F3C6D9C005A2BCE /* SearchPlaceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F65DA1F3C6D9C005A2BCE /* SearchPlaceRouter.swift */; };
 		7F6F65E01F3C794C005A2BCE /* PlaceShowCiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F65DF1F3C794C005A2BCE /* PlaceShowCiewController.swift */; };
 		7F6F65E21F3C7D6E005A2BCE /* PlaceShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F65E11F3C7D6E005A2BCE /* PlaceShowViewModel.swift */; };
-		FBF75C4AD39EDFF02153316B /* Pods_PlaceFetcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47FCE78A41D9547100CF6E96 /* Pods_PlaceFetcherTests.framework */; };
+		7F6F65EC1F3DC2B4005A2BCE /* AutocomplteMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F6F65EB1F3DC2B4005A2BCE /* AutocomplteMock.json */; };
+		7F6F65EE1F3DC2CC005A2BCE /* BaseTestNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F65ED1F3DC2CC005A2BCE /* BaseTestNetworkManager.swift */; };
+		7F6F65F01F3DC2E1005A2BCE /* MockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F65EF1F3DC2E1005A2BCE /* MockManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,9 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		329A68E58891910AED318D5F /* Pods-PlaceFetcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceFetcherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceFetcherTests/Pods-PlaceFetcherTests.release.xcconfig"; sourceTree = "<group>"; };
-		47FCE78A41D9547100CF6E96 /* Pods_PlaceFetcherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaceFetcherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6424232D9F53A50683A2A2A8 /* Pods-PlaceFetcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceFetcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceFetcher/Pods-PlaceFetcher.release.xcconfig"; sourceTree = "<group>"; };
+		3762A9444C1E51B3EF5C3821 /* Pods-PlaceFetcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceFetcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceFetcher/Pods-PlaceFetcher.debug.xcconfig"; sourceTree = "<group>"; };
 		7F1BE3521F3BB6E6001379E4 /* GMSMapViewDelegate+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GMSMapViewDelegate+Rx.swift"; path = "Extension/GMSMapViewDelegate+Rx.swift"; sourceTree = "<group>"; };
 		7F1BE3541F3BCEFD001379E4 /* PlaceSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchViewModel.swift; sourceTree = "<group>"; };
 		7F3C56151F39FAEB0018BF2B /* PlaceFetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceFetcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,13 +76,19 @@
 		7F3C56501F3A02140018BF2B /* GooglePlaceItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlaceItem.swift; path = Models/GooglePlaceItem.swift; sourceTree = "<group>"; };
 		7F3C56521F3A03840018BF2B /* BaseApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseApiManager.swift; path = "API Managers/BaseApiManager.swift"; sourceTree = "<group>"; };
 		7F3C56541F3A03FC0018BF2B /* BaseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseModels.swift; path = Models/BaseModels.swift; sourceTree = "<group>"; };
+		7F5586791F3E34D600C7E4C9 /* PlaceDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PlaceDetails.json; path = MockData/PlaceDetails.json; sourceTree = "<group>"; };
 		7F6F65D51F3C6C8B005A2BCE /* RouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouterProtocol.swift; path = Routers/RouterProtocol.swift; sourceTree = "<group>"; };
 		7F6F65DA1F3C6D9C005A2BCE /* SearchPlaceRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchPlaceRouter.swift; path = Routers/SearchPlaceRouter.swift; sourceTree = "<group>"; };
 		7F6F65DF1F3C794C005A2BCE /* PlaceShowCiewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceShowCiewController.swift; path = Controllers/PlaceShowCiewController.swift; sourceTree = "<group>"; };
 		7F6F65E11F3C7D6E005A2BCE /* PlaceShowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceShowViewModel.swift; sourceTree = "<group>"; };
-		92F2FC36AB923F5F41496651 /* Pods-PlaceFetcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceFetcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceFetcher/Pods-PlaceFetcher.debug.xcconfig"; sourceTree = "<group>"; };
-		BC0F194D8C5A067DE67E2DE1 /* Pods_PlaceFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaceFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAA12D8FBF20DB6E3997B1D7 /* Pods-PlaceFetcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceFetcherTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceFetcherTests/Pods-PlaceFetcherTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F6F65EB1F3DC2B4005A2BCE /* AutocomplteMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = AutocomplteMock.json; path = MockData/AutocomplteMock.json; sourceTree = "<group>"; };
+		7F6F65ED1F3DC2CC005A2BCE /* BaseTestNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTestNetworkManager.swift; sourceTree = "<group>"; };
+		7F6F65EF1F3DC2E1005A2BCE /* MockManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockManager.swift; sourceTree = "<group>"; };
+		AC8205D65405D36D40B21C7F /* Pods-PlaceFetcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceFetcherTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceFetcherTests/Pods-PlaceFetcherTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4772A0D99A2CC31CE41F781 /* Pods-PlaceFetcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceFetcherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceFetcherTests/Pods-PlaceFetcherTests.release.xcconfig"; sourceTree = "<group>"; };
+		E9F1A940CC4F042BA065901F /* Pods-PlaceFetcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceFetcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceFetcher/Pods-PlaceFetcher.release.xcconfig"; sourceTree = "<group>"; };
+		F1CD8CD92274B9693D42CE1A /* Pods_PlaceFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaceFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF3528AC390CFB1C0E7FBEA2 /* Pods_PlaceFetcherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlaceFetcherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F02DE7E523CC825682D3B5A /* Pods_PlaceFetcher.framework in Frameworks */,
+				74AF5F2AB9EF64384E9009A9 /* Pods_PlaceFetcher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBF75C4AD39EDFF02153316B /* Pods_PlaceFetcherTests.framework in Frameworks */,
+				3EDA740CEA7FC730734948A4 /* Pods_PlaceFetcherTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +118,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D18FFE3911F47EBB5D3BC8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3762A9444C1E51B3EF5C3821 /* Pods-PlaceFetcher.debug.xcconfig */,
+				E9F1A940CC4F042BA065901F /* Pods-PlaceFetcher.release.xcconfig */,
+				AC8205D65405D36D40B21C7F /* Pods-PlaceFetcherTests.debug.xcconfig */,
+				C4772A0D99A2CC31CE41F781 /* Pods-PlaceFetcherTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1EABD784DA98101C754F3BFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1CD8CD92274B9693D42CE1A /* Pods_PlaceFetcher.framework */,
+				FF3528AC390CFB1C0E7FBEA2 /* Pods_PlaceFetcherTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7F1BE3511F3BB69E001379E4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,8 +153,8 @@
 				7F3C562C1F39FAEC0018BF2B /* PlaceFetcherTests */,
 				7F3C56371F39FAEC0018BF2B /* PlaceFetcherUITests */,
 				7F3C56161F39FAEB0018BF2B /* Products */,
-				99C87F43CFA73CB9AD26CD93 /* Pods */,
-				8023C952B76EEB0A690ED19B /* Frameworks */,
+				0D18FFE3911F47EBB5D3BC8B /* Pods */,
+				1EABD784DA98101C754F3BFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,8 +186,11 @@
 		7F3C562C1F39FAEC0018BF2B /* PlaceFetcherTests */ = {
 			isa = PBXGroup;
 			children = (
+				7F6F65EA1F3DC295005A2BCE /* MockData */,
 				7F3C562D1F39FAEC0018BF2B /* PlaceFetcherTests.swift */,
 				7F3C562F1F39FAEC0018BF2B /* Info.plist */,
+				7F6F65ED1F3DC2CC005A2BCE /* BaseTestNetworkManager.swift */,
+				7F6F65EF1F3DC2E1005A2BCE /* MockManager.swift */,
 			);
 			path = PlaceFetcherTests;
 			sourceTree = "<group>";
@@ -240,24 +271,13 @@
 			name = PlaceShow;
 			sourceTree = "<group>";
 		};
-		8023C952B76EEB0A690ED19B /* Frameworks */ = {
+		7F6F65EA1F3DC295005A2BCE /* MockData */ = {
 			isa = PBXGroup;
 			children = (
-				BC0F194D8C5A067DE67E2DE1 /* Pods_PlaceFetcher.framework */,
-				47FCE78A41D9547100CF6E96 /* Pods_PlaceFetcherTests.framework */,
+				7F6F65EB1F3DC2B4005A2BCE /* AutocomplteMock.json */,
+				7F5586791F3E34D600C7E4C9 /* PlaceDetails.json */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		99C87F43CFA73CB9AD26CD93 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				92F2FC36AB923F5F41496651 /* Pods-PlaceFetcher.debug.xcconfig */,
-				6424232D9F53A50683A2A2A8 /* Pods-PlaceFetcher.release.xcconfig */,
-				FAA12D8FBF20DB6E3997B1D7 /* Pods-PlaceFetcherTests.debug.xcconfig */,
-				329A68E58891910AED318D5F /* Pods-PlaceFetcherTests.release.xcconfig */,
-			);
-			name = Pods;
+			name = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,13 +287,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F3C563D1F39FAEC0018BF2B /* Build configuration list for PBXNativeTarget "PlaceFetcher" */;
 			buildPhases = (
-				BE15BF91668C23C1603FCFA4 /* [CP] Check Pods Manifest.lock */,
+				AB18F59DA169C1C32DF1BFE6 /* [CP] Check Pods Manifest.lock */,
 				7F3C56111F39FAEB0018BF2B /* Sources */,
 				7F3C56121F39FAEB0018BF2B /* Frameworks */,
 				7F3C56131F39FAEB0018BF2B /* Resources */,
-				C779C3FD77B4F05EC97051A8 /* [CP] Embed Pods Frameworks */,
-				D55D6B049251B57245CBC8EB /* [CP] Copy Pods Resources */,
 				7F3C56561F3B58AE0018BF2B /* ShellScript */,
+				64CA3E7D32A9360028C36510 /* [CP] Embed Pods Frameworks */,
+				DCF8A0E9173FCD8E9D224E93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,12 +308,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F3C56401F39FAEC0018BF2B /* Build configuration list for PBXNativeTarget "PlaceFetcherTests" */;
 			buildPhases = (
-				9CF20297EED22E5B5E7B7EDE /* [CP] Check Pods Manifest.lock */,
+				7FB676C6D3C8C6C175002847 /* [CP] Check Pods Manifest.lock */,
 				7F3C56251F39FAEC0018BF2B /* Sources */,
 				7F3C56261F39FAEC0018BF2B /* Frameworks */,
 				7F3C56271F39FAEC0018BF2B /* Resources */,
-				38D5A8CD219C2BF60024901B /* [CP] Embed Pods Frameworks */,
-				5871D477360DAD28729F0631 /* [CP] Copy Pods Resources */,
+				3F7CB21801D70EBA827BADC2 /* [CP] Embed Pods Frameworks */,
+				B78AC102FC4F1D8717D2775E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -385,6 +405,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F55867A1F3E34D600C7E4C9 /* PlaceDetails.json in Resources */,
+				7F6F65EC1F3DC2B4005A2BCE /* AutocomplteMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +420,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		38D5A8CD219C2BF60024901B /* [CP] Embed Pods Frameworks */ = {
+		3F7CB21801D70EBA827BADC2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -413,19 +435,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceFetcherTests/Pods-PlaceFetcherTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5871D477360DAD28729F0631 /* [CP] Copy Pods Resources */ = {
+		64CA3E7D32A9360028C36510 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceFetcherTests/Pods-PlaceFetcherTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceFetcher/Pods-PlaceFetcher-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7F3C56561F3B58AE0018BF2B /* ShellScript */ = {
@@ -441,7 +463,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		9CF20297EED22E5B5E7B7EDE /* [CP] Check Pods Manifest.lock */ = {
+		7FB676C6D3C8C6C175002847 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -456,7 +478,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		BE15BF91668C23C1603FCFA4 /* [CP] Check Pods Manifest.lock */ = {
+		AB18F59DA169C1C32DF1BFE6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -471,22 +493,22 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C779C3FD77B4F05EC97051A8 /* [CP] Embed Pods Frameworks */ = {
+		B78AC102FC4F1D8717D2775E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceFetcher/Pods-PlaceFetcher-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceFetcherTests/Pods-PlaceFetcherTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D55D6B049251B57245CBC8EB /* [CP] Copy Pods Resources */ = {
+		DCF8A0E9173FCD8E9D224E93 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -530,7 +552,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F6F65F01F3DC2E1005A2BCE /* MockManager.swift in Sources */,
 				7F3C562E1F39FAEC0018BF2B /* PlaceFetcherTests.swift in Sources */,
+				7F6F65EE1F3DC2CC005A2BCE /* BaseTestNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,7 +696,7 @@
 		};
 		7F3C563E1F39FAEC0018BF2B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92F2FC36AB923F5F41496651 /* Pods-PlaceFetcher.debug.xcconfig */;
+			baseConfigurationReference = 3762A9444C1E51B3EF5C3821 /* Pods-PlaceFetcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 565PUU22ST;
@@ -686,7 +710,7 @@
 		};
 		7F3C563F1F39FAEC0018BF2B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6424232D9F53A50683A2A2A8 /* Pods-PlaceFetcher.release.xcconfig */;
+			baseConfigurationReference = E9F1A940CC4F042BA065901F /* Pods-PlaceFetcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 565PUU22ST;
@@ -700,7 +724,7 @@
 		};
 		7F3C56411F39FAEC0018BF2B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAA12D8FBF20DB6E3997B1D7 /* Pods-PlaceFetcherTests.debug.xcconfig */;
+			baseConfigurationReference = 3762A9444C1E51B3EF5C3821 /* Pods-PlaceFetcher.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -715,7 +739,7 @@
 		};
 		7F3C56421F39FAEC0018BF2B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 329A68E58891910AED318D5F /* Pods-PlaceFetcherTests.release.xcconfig */;
+			baseConfigurationReference = E9F1A940CC4F042BA065901F /* Pods-PlaceFetcher.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

@@ -10,9 +10,11 @@ import UIKit
 
 class SearchPlaceRouter: Router {
     unowned var viewModel: PlaceSearchViewModel
+    var testing: Bool
 
-    init(viewModel: PlaceSearchViewModel) {
+    init(viewModel: PlaceSearchViewModel, testing: Bool) {
         self.viewModel = viewModel
+        self.testing = testing
     }
 
     func route(to routeID: String, from context: UIViewController, parameters: Any?) {
@@ -24,7 +26,7 @@ class SearchPlaceRouter: Router {
         case .placeOnMap:
             if let vc = PlaceShowViewController.instantiate(), let placeForShowing = viewModel.selectedPlace {
                 vc.viewModel = PlaceShowViewModel(placeForLoading: placeForShowing)
-                context.navigationController?.pushViewController(vc, animated: true)
+                context.navigationController?.pushViewController(vc, animated: !testing)
             }
         }
     }

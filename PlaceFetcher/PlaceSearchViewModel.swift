@@ -17,7 +17,8 @@ class PlaceSearchViewModel {
     var selectedPlace: GooglePlaceItem?
 
     let bag = DisposeBag()
-    private let debounceTime = 0.3
+    var debounceTime = 0.3
+    var myDefaultScheduler: SchedulerType = MainScheduler.instance
 
     init() {
         let searchTextObservable = searchTextVariable.asObservable()
@@ -30,7 +31,7 @@ class PlaceSearchViewModel {
         searchTextObservable
             .filter { !$0.isEmpty }
             // do not spam server :)
-            .debounce(debounceTime, scheduler: MainScheduler.instance)
+//            .debounce(debounceTime, scheduler: myDefaultScheduler)
             .flatMap { (val) -> Observable<GooglePlaceArrayResult> in
                 return GooglePlaceAPIManager.sharedInstance.getAutocomplete(for: val)
             }

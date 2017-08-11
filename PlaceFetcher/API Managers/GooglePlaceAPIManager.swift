@@ -10,7 +10,7 @@ import CoreLocation
 import RxSwift
 
 class GooglePlaceAPIManager: BaseAPIManager<GooglePlaceObjectResult, GooglePlaceArrayResult> {
-    static let sharedInstance = GooglePlaceAPIManager()
+    static var sharedInstance = GooglePlaceAPIManager()
 
     // MARK: links
     private let autocompleteUrl = "/maps/api/place/autocomplete/json"

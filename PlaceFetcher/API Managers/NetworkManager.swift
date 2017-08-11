@@ -12,7 +12,7 @@ typealias StringApiResponse = Alamofire.Result<String>
 
 protocol NetworkManagerProtocol: class {
 
-    func sendRequest(_ method: Alamofire.HTTPMethod, url: String, params: [String: Any], encoding: ParameterEncoding, callback: ((StringApiResponse) -> Void)?)
+    func sendRequest(_ method: Alamofire.HTTPMethod, url: String, params: [String: Any], callback: ((StringApiResponse) -> Void)?)
 
     func get(_ url: String, params: [String: Any], callback: ((StringApiResponse) -> Void)?)
 
@@ -68,7 +68,7 @@ class NetworkManager: NetworkManagerProtocol {
         self.sendRequest(HTTPMethod.delete, url: url, params: params, callback: callback)
     }
 
-    func sendRequest(_ method: Alamofire.HTTPMethod, url: String, params: [String: Any] = [:], encoding: ParameterEncoding = URLEncoding.default, callback: ((StringApiResponse) -> Void)?) {
+    func sendRequest(_ method: Alamofire.HTTPMethod, url: String, params: [String: Any] = [:], callback: ((StringApiResponse) -> Void)?) {
         let requestUrl = URL(string: ApiKeys.serverUrl + url)!
 
         let finalEncoding: ParameterEncoding = .get == method ? URLEncoding.queryString: JSONEncoding.default

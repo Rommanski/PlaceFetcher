@@ -12,6 +12,8 @@ PODS:
     - RxCocoa (~> 3.0)
     - RxSwift (~> 3.0)
   - RxSwift (3.6.1)
+  - RxTest (3.6.1):
+    - RxSwift (~> 3.6)
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
@@ -21,6 +23,7 @@ DEPENDENCIES:
   - RxCocoa
   - RxDataSources (~> 1.0)
   - RxSwift
+  - RxTest
   - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -30,8 +33,9 @@ SPEC CHECKSUMS:
   RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
   RxDataSources: b3389acc5fe2eefb8fcd81a2b76a876ad08bc82a
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
+  RxTest: 1d00348a7848c91ab5bf5d197d2378aa6b2bb356
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 7d2414cbb0194187bc005dd7c040071b057e42b6
+PODFILE CHECKSUM: 1ee9a9d5bee8f8d44ae094cf21cf9be7fbdc332a
 
 COCOAPODS: 1.2.0

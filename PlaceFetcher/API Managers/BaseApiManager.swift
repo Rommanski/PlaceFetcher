@@ -20,7 +20,7 @@ class BaseAPIManager<TObj: ObjectWrapperProtocol, TArr: ArrayWrapperProtocol> {
     }
 
     func sendRequestWithSingelObject(_ method: Alamofire.HTTPMethod = .get, url: String, params: [String: Any] = [:], callback: ((ApiResponse<TObj>) -> Void)?) {
-        NetworkManager.sharedInstance.sendRequest(method, url: url, params: params) { (response) in
+        netwrokManager.sendRequest(method, url: url, params: params) { (response) in
             switch response {
             case .failure(let err):
                 callback?(ApiResponse.failure(err))
@@ -36,7 +36,7 @@ class BaseAPIManager<TObj: ObjectWrapperProtocol, TArr: ArrayWrapperProtocol> {
     }
 
     func sendRequestWithArrayOfObjects(_ method: Alamofire.HTTPMethod = .get, url: String, params: [String: Any] = [:], callback: ((ApiResponse<TArr>) -> Void)?) {
-        NetworkManager.sharedInstance.sendRequest(method, url: url, params: params) { (response) in
+        netwrokManager.sendRequest(method, url: url, params: params) { (response) in
             switch response {
             case .failure(let err):
                 callback?(ApiResponse.failure(err))

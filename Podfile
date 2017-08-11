@@ -14,5 +14,6 @@ target 'PlaceFetcher' do
 
   target 'PlaceFetcherTests' do
     inherit! :search_paths
+    pod 'RxTest'
   end
 end

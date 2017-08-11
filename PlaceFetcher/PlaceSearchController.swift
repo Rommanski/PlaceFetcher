@@ -19,16 +19,17 @@ class PlaceSearchController: UIViewController {
     }
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet private weak var searchingTextField: UITextField!
+    @IBOutlet weak var searchingTextField: UITextField!
 
     let viewModel = PlaceSearchViewModel()
     var router: SearchPlaceRouter!
     let bag = DisposeBag()
+    var isTesting = false
     private let cellId = "placeCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.router = SearchPlaceRouter(viewModel: viewModel)
+        self.router = SearchPlaceRouter(viewModel: viewModel, testing: isTesting)
         self.title = "Search"
 
         // bind text field value to view model
