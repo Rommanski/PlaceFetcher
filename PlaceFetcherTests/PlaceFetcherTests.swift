@@ -45,14 +45,18 @@ class PlaceFetcherTests: XCTestCase {
     func testExample() {
         GooglePlaceAPIManager.sharedInstance = GooglePlaceAPIManager(netwrokManager: AutocompleteManagerMock())
         controllerUnderTest.viewModel.searchTextVariable.value = "test"
+        // we must have 3 autocomplete elements
         XCTAssert(controllerUnderTest.viewModel.searchResultVariable.value.count == 3)
 
         GooglePlaceAPIManager.sharedInstance = GooglePlaceAPIManager(netwrokManager: PlaceDetailsManagerMock())
+        // click to the second row
         controllerUnderTest.tableView.delegate?.tableView?(controllerUnderTest.tableView, didSelectRowAt: IndexPath(row: 1, section: 0))
+        // vc must be pushed
         XCTAssert(navigationController.viewControllers.last?.isKind(of: PlaceShowViewController.self) ?? false)
 
         if let placeShowVC = navigationController?.topViewController as? PlaceShowViewController {
             _ = placeShowVC.view
+            // check center of the map view
             let region = GMSCoordinateBounds(region: placeShowVC.mapView.projection.visibleRegion())
             XCTAssert(region.contains(CLLocationCoordinate2D(latitude: centerLat, longitude: centerLng)))
         }

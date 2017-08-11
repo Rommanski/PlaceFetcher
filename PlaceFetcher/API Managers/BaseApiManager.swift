@@ -29,6 +29,10 @@ class BaseAPIManager<TObj: ObjectWrapperProtocol, TArr: ArrayWrapperProtocol> {
             case .success(let jsonString):
                 if let wrapper = Mapper<TObj>().map(JSONString: jsonString) {
                     callback?(ApiResponse.success(wrapper))
+                } else {
+                    callback?(ApiResponse.failure(NSError(domain: "place.fetcher",
+                                                                code: 1001,
+                                                                userInfo: [NSLocalizedDescriptionKey: "Mapping problem"])))
                 }
                 break
             }
@@ -45,6 +49,10 @@ class BaseAPIManager<TObj: ObjectWrapperProtocol, TArr: ArrayWrapperProtocol> {
             case .success(let jsonString):
                 if let wrapper = Mapper<TArr>().map(JSONString: jsonString) {
                     callback?(ApiResponse.success(wrapper))
+                } else {
+                    callback?(ApiResponse.failure(NSError(domain: "place.fetcher",
+                                                                code: 1001,
+                                                                userInfo: [NSLocalizedDescriptionKey: "Mapping problem"])))
                 }
                 break
             }

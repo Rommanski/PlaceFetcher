@@ -30,8 +30,6 @@ class PlaceSearchViewModel {
         // request autocomplete if serch test is not empty
         searchTextObservable
             .filter { !$0.isEmpty }
-            // do not spam server :)
-//            .debounce(debounceTime, scheduler: myDefaultScheduler)
             .flatMap { (val) -> Observable<GooglePlaceArrayResult> in
                 return GooglePlaceAPIManager.sharedInstance.getAutocomplete(for: val)
             }
