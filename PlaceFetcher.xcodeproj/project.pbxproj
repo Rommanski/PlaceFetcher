@@ -138,14 +138,14 @@
 		7F3C56171F39FAEB0018BF2B /* PlaceFetcher */ = {
 			isa = PBXGroup;
 			children = (
-				7F6F65DC1F3C787C005A2BCE /* Scenes */,
-				7F6F65D91F3C6CE0005A2BCE /* SupportingFiles */,
 				7F3C56461F39FDE40018BF2B /* API Managers */,
 				7F3C56491F39FF300018BF2B /* ApiKeys.swift */,
 				7F3C56181F39FAEB0018BF2B /* AppDelegate.swift */,
 				7F1BE3511F3BB69E001379E4 /* Extensions */,
 				7F3C564D1F3A008E0018BF2B /* Models */,
+				7F6F65DC1F3C787C005A2BCE /* Scenes */,
 				7F6F65D71F3C6CB4005A2BCE /* Storyboards */,
+				7F6F65D91F3C6CE0005A2BCE /* SupportingFiles */,
 			);
 			path = PlaceFetcher;
 			sourceTree = "<group>";

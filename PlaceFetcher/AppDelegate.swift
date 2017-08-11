@@ -8,7 +8,6 @@
 
 import UIKit
 import GoogleMaps
-import DropDown
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,8 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // init google maps sdk
         GMSServices.provideAPIKey(ApiKeys.googleMapsApiKey)
-
-        DropDown.startListeningToKeyboard()
 
         return true
     }

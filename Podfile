@@ -9,6 +9,6 @@ target 'PlaceFetcher' do
   pod 'ObjectMapper'
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'DropDown'
+  pod 'RxDataSources', '~> 1.0'
   pod 'SVProgressHUD'
 end

@@ -86,9 +86,15 @@ class NetworkManager: NetworkManagerProtocol {
             if result.result.isSuccess, let jsonString = result.result.value {
                 callback?(StringApiResponse.success(jsonString))
             } else {
-                //                callback?(nil, getErrorFor(SalonErrorType.invalidAPIResponse))
+                callback?(StringApiResponse.failure(NSError(domain: "place.fetcher",
+                                                            code: 1001,
+                                                            userInfo: [NSLocalizedDescriptionKey: "Mapping problem"])))
             }
         }
     }
+
+}
+
+struct MappingError: Error {
 
 }

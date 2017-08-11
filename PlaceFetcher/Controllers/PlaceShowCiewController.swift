@@ -33,10 +33,11 @@ class PlaceShowViewController: UIViewController {
         // subscribe to receiving info about place
         viewModel.placeForShowingObservable.subscribe(onNext: { [weak self] (result) in
             switch result {
-            case .success(let place):
+            case .success(let placeWrapper):
                 SVProgressHUD.dismiss()
-                if let coords = place.object?.coords {
-                    self?.mapView.camera = GMSCameraPosition.camera(withTarget: coords, zoom: 10.0)
+                if let place = placeWrapper.object {
+                    let bounds = GMSCoordinateBounds(coordinate: place.coordsNortheast, coordinate: place.coordsSouthwest)
+                    self?.mapView.moveCamera(GMSCameraUpdate.fit(bounds, withPadding: 50.0))
                 }
                 break
 

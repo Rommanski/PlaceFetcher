@@ -16,19 +16,17 @@ class GooglePlaceAPIManager: BaseAPIManager<GooglePlaceObjectResult, GooglePlace
     private let autocompleteUrl = "/maps/api/place/autocomplete/json"
     private let detailsUrl = "/maps/api/place/details/json"
 
-    func getAutocomplete(for keyword: String, with coords: CLLocationCoordinate2D, callback: @escaping ((ApiResponse<GooglePlaceArrayResult>) -> Void)) {
+    func getAutocomplete(for keyword: String, callback: @escaping ((ApiResponse<GooglePlaceArrayResult>) -> Void)) {
         let params: [String: Any] = [
-            "location": "\(coords.latitude),\(coords.longitude)",
             "input": keyword,
-            "key": ApiKeys.googlePlaceApiKey,
-            "radius": 500
+            "key": ApiKeys.googlePlaceApiKey
         ]
         self.sendRequestWithArrayOfObjects(.get, url: autocompleteUrl, params: params, callback: callback)
     }
 
-    func getAutocomplete(for keyword: String, with coords: CLLocationCoordinate2D) -> Observable<GooglePlaceArrayResult> {
+    func getAutocomplete(for keyword: String) -> Observable<GooglePlaceArrayResult> {
         return Observable<GooglePlaceArrayResult>.create({ (observer) -> Disposable in
-            self.getAutocomplete(for: keyword, with: coords, callback: { (result) in
+            self.getAutocomplete(for: keyword, callback: { (result) in
                 self.openApiResponse(observer: observer, result: result)
             })
 
@@ -48,7 +46,6 @@ class GooglePlaceAPIManager: BaseAPIManager<GooglePlaceObjectResult, GooglePlace
         return Observable<ApiResponse<GooglePlaceObjectResult>>.create({ (observer) -> Disposable in
             self.getDetails(forPlaceWithId: placeId, callback: { (result) in
                 observer.onNext(result)
-//                self.openApiResponse(observer: observer, result: result)
             })
 
             return Disposables.create()

@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.5.0)
-  - DropDown (2)
   - GoogleMaps (2.3.1):
     - GoogleMaps/Maps (= 2.3.1)
   - GoogleMaps/Base (2.3.1)
@@ -9,27 +8,30 @@ PODS:
   - ObjectMapper (2.2.7)
   - RxCocoa (3.5.0):
     - RxSwift (~> 3.4)
+  - RxDataSources (1.0.4):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
   - RxSwift (3.5.0)
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - Alamofire
-  - DropDown
   - GoogleMaps
   - ObjectMapper
   - RxCocoa
+  - RxDataSources (~> 1.0)
   - RxSwift
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  DropDown: 744784d9c9aa505100e942c16acd05430cbb2f0a
   GoogleMaps: c66a71058b9b1294bcdd5463a68e357fa50c079f
   ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
   RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
+  RxDataSources: b3389acc5fe2eefb8fcd81a2b76a876ad08bc82a
   RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 24abd674c962b4a49ec9eaceeebcc0a88f1316b7
+PODFILE CHECKSUM: 1ffc227882368a0dec5d589874521bc64a0e5fe2
 
 COCOAPODS: 1.2.0

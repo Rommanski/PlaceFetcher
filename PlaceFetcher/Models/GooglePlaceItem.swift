@@ -15,6 +15,10 @@ class GooglePlaceItem: Mappable {
     var placeId: String = ""
     var lat: Double = 0.0
     var lng: Double = 0.0
+    var northeastLat: Double = 0.0
+    var northeastLng: Double = 0.0
+    var southwestLat: Double = 0.0
+    var southwestLng: Double = 0.0
 
     // MARK: - object mapping
 
@@ -29,10 +33,22 @@ class GooglePlaceItem: Mappable {
         name                <- map["name"]
         lat                 <- map["geometry.location.lat"]
         lng                 <- map["geometry.location.lng"]
+        northeastLat        <- map["geometry.viewport.northeast.lat"]
+        northeastLng        <- map["geometry.viewport.northeast.lng"]
+        southwestLat        <- map["geometry.viewport.southwest.lat"]
+        southwestLng        <- map["geometry.viewport.southwest.lng"]
     }
 
     var coords: CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: lat, longitude: lng)
+    }
+
+    var coordsNortheast: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: northeastLat, longitude: northeastLng)
+    }
+
+    var coordsSouthwest: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: southwestLat, longitude: southwestLng)
     }
 
 }

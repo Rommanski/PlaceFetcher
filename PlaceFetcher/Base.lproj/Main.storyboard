@@ -14,7 +14,7 @@
         <scene sceneID="Iu3-Wh-a7R">
             <objects>
                 <navigationController id="WD0-q9-eOh" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0hU-7a-Mcm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0hU-7a-Mcm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -44,10 +44,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i0P-lP-U8H">
+                                <rect key="frame" x="-4" y="134" width="383" height="513"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="placeCell" textLabel="luF-Fx-zZ2" style="IBUITableViewCellStyleDefault" id="72R-LG-Lke">
+                                        <rect key="frame" x="0.0" y="28" width="383" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="72R-LG-Lke" id="1YN-dS-mZz">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="luF-Fx-zZ2">
+                                                    <rect key="frame" x="15" y="0.0" width="353" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Ati-lD-gsG" secondAttribute="trailing" constant="20" id="3mT-qu-M2X"/>
+                            <constraint firstItem="i0P-lP-U8H" firstAttribute="top" secondItem="Ati-lD-gsG" secondAttribute="bottom" constant="20" id="7bE-F6-AOz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i0P-lP-U8H" secondAttribute="trailing" constant="-20" id="G2i-o8-GY9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="i0P-lP-U8H" secondAttribute="bottom" constant="20" id="JH1-IK-PgR"/>
+                            <constraint firstItem="i0P-lP-U8H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="SmR-Ms-Z85"/>
                             <constraint firstItem="Ati-lD-gsG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="aqT-SI-i0P"/>
                             <constraint firstItem="Ati-lD-gsG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="pfe-GR-hvK"/>
                         </constraints>
@@ -55,6 +82,7 @@
                     <navigationItem key="navigationItem" id="5oP-ZQ-9rx"/>
                     <connections>
                         <outlet property="searchingTextField" destination="Ati-lD-gsG" id="tQh-wy-bQA"/>
+                        <outlet property="tableView" destination="i0P-lP-U8H" id="04a-uD-dhl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
