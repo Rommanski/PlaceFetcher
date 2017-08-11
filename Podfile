@@ -11,4 +11,8 @@ target 'PlaceFetcher' do
   pod 'RxCocoa'
   pod 'RxDataSources', '~> 1.0'
   pod 'SVProgressHUD'
+
+  target 'PlaceFetcherTests' do
+    inherit! :search_paths
+  end
 end
