@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import CoreLocation
 
-class MapViewModel {
+class PlaceSearchViewModel {
     let searchTextVariable = Variable<String?>("")
     let searchCoordVariable = Variable<CLLocationCoordinate2D>(CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0))
     let searchResultVariable = Variable<[GooglePlaceItem]>([])

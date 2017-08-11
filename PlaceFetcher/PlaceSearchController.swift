@@ -13,7 +13,7 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-class MapViewController: UIViewController {
+class PlaceSearchController: UIViewController {
     enum Route: String {
         case placeOnMap
     }
@@ -21,7 +21,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet private weak var searchingTextField: UITextField!
 
-    let viewModel = MapViewModel()
+    let viewModel = PlaceSearchViewModel()
     var router: SearchPlaceRouter!
     let bag = DisposeBag()
     private let cellId = "placeCell"

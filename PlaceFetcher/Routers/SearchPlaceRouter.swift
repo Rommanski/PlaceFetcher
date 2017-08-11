@@ -9,14 +9,14 @@
 import UIKit
 
 class SearchPlaceRouter: Router {
-    unowned var viewModel: MapViewModel
+    unowned var viewModel: PlaceSearchViewModel
 
-    init(viewModel: MapViewModel) {
+    init(viewModel: PlaceSearchViewModel) {
         self.viewModel = viewModel
     }
 
     func route(to routeID: String, from context: UIViewController, parameters: Any?) {
-        guard let route = MapViewController.Route(rawValue: routeID) else {
+        guard let route = PlaceSearchController.Route(rawValue: routeID) else {
             return
         }
 
